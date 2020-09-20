@@ -15,7 +15,7 @@ const routes: Routes = [
     data: { animationState: 'User' },
   },
   { path: '', redirectTo: 'users', pathMatch: 'full' },
-  { path: '**', redirectTo: '/' },
+  { path: '**', redirectTo: '/users' },
 ]
 
 @NgModule({
