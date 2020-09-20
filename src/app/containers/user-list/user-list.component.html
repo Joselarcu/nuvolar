@@ -1,0 +1,19 @@
+<h1>Top users</h1>
+<div class="row">
+  <h5 *ngIf="(searchService.searchText$ | async) === ''" class="message">
+    Start type to search users
+  </h5>
+  <h5
+    *ngIf="(users$ | async) && (users$ | async)?.length === 0"
+    class="message"
+  >
+    User {{ searchService.searchText$ | async }} not found
+  </h5>
+  <div class="col user" *ngFor="let user of users$ | async">
+    <app-card
+      [title]="user.login"
+      [score]="user.score"
+      [image]="user.avatar_url"
+    ></app-card>
+  </div>
+</div>

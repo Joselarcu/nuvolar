@@ -1,0 +1,9 @@
+<ul class="list-group">
+  <li class="list-group-item active">{{ title }}</li>
+  <li class="list-group-item empty" *ngIf="items?.length === 0">
+    This user has no {{ title }}
+  </li>
+  <div class="scroll">
+    <li class="list-group-item" *ngFor="let item of items">{{ item }}</li>
+  </div>
+</ul>

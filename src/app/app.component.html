@@ -1,0 +1,13 @@
+<app-header
+  (switchTheme)="switchTheme()"
+  [disableInput]="disableInput$ | async"
+></app-header>
+<app-alert></app-alert>
+<app-loading></app-loading>
+<div
+  class="app-container"
+  [@triggerName]="prepareRoute(outlet)"
+  [ngClass]="theme"
+>
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

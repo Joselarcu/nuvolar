@@ -1,0 +1,8 @@
+<div class="card">
+  <img [src]="image" class="card-img-top" alt="avatar" />
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">Score: {{ score }}</p>
+    <a [routerLink]="['/users', title]" class="btn btn-primary">+ Info</a>
+  </div>
+</div>
